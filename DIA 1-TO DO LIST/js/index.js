@@ -8,11 +8,11 @@ while (menu !== 0){
 
     switch (menu){
         case 1:
-             let descricao = prompt("Descrição da lista")
+             let descTarefa = prompt("Descrição da lista")
 
              let novaTarefa = {
                 id: tarefas.length + 1,
-                descricao: descricao,
+                descricao: descTarefa,
                 concluido: false
              }
             tarefas.push(novaTarefa)
@@ -20,8 +20,18 @@ while (menu !== 0){
             break
 
         case 2:
-             console.log("Lista de tarefas")
-             console.log(tarefas)
+            console.log("Lista de tarefas")
+             
+            for (let i = 0; i < tarefas.length; i++){
+                let tarefa = tarefas[i]
+                let status
+                if (tarefa.concluido){
+                    status = "Concluído"
+                } else {
+                    status = "Pendente"
+                }
+                console.log(`${tarefa.id} - ${tarefa.descricao} - ${status}`)
+            } 
              break
              
         case 0:
