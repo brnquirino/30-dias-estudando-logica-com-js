@@ -54,7 +54,7 @@ while (menu !== 0){
                 if (stock[i].id === entryId){
                     let amountProduct = Number(prompt("Quanto deseja adicionar ao estoque?"));
                     stock[i].amount += amountProduct;
-                    console.log(`Foi adicionado mais ${quantidade} em ${stock[i].product}`);
+                    console.log(`Foi adicionado mais ${amountProduct} em ${stock[i].product}`);
                     foundEntry = true;
                     break;
                 };
